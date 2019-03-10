@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script>
+//  保留特定位数的小数 toFixed(n)
+//超出特定位数的四舍五入，返回的是字符串
+var num1=20.367;
+num1.toFixed(2);
+
+var num1=20;
+var numobject =new Number(num1);
+//console.log(numobject._prto_==Number.prototype);
+numobject.toFixed();
+
+
+//toPrecision(数字位个数)，四舍五入 
+//数字位个数小于整数的字数位时，表示成指数形式
+//大于或者等于数字整数位时，直接四舍五入截取
+var num2= 12345.6789;
+num2.toPrecision(4);
+
+
+var str="abcdefh";
+str.charAt(2);
+
+//将特定unicode转换为字符
+String.fromCharCode(97,98,99);
+
+//将特定索引位置的字符转换为unicode码
+str.charCodeAt(0)
+//slice(截取的起始位置，截取的结束位置)
+//一个参数的话默认截取到最后
+//如果截取的结束位置小于0，结束位置为str.lengh+截取结束参数
+str.slice(0,3);
+str.slice(-2);                       //试试str.slice(-2);
+
+//substr(截取的起始位置，截取的长度)
+//截取的长的可以省略，表示从起始位置到字符串结束
+str.substr(0,3);
+
+//substring (起始值，结束值)
+//如果起始值比结束值大，双方互换位置
+//超出0-str.length范围的会被截断
+str.substring(1,-1);  
+
+//split(分隔符，限定数组的长度) 
+"abc*hn*hnh".split("*",2);
+"abc*hn*hnh".split("");//注意空字符串
+"abc*hn*hnh".split();//注意空和空字符串
+
+var str1="     ac  f";
+str.trim();3
+
+var str2 ="abc";
+str1.concat("def","ghi");
+
+//indexOf(查找的特定字符，查找的起始位置)；
+//返回值是字符串出现的索引位置
+//查找不到，返回值为-1
+var str3="abcdefg";
+str3.indexOf("f");//不加的话默认从0开始起始
+
+str3.lastIndexOf("bcd");
+
+str3.charAt(2); //charAt返回指定位置的字符
+str3.charcodeAt(2); //指定位置的字符的 Unicode 编码
+str3.substr(1,3);//sub在字符串中抽取从 start 下标开始的指定数目的字符。
+str3.substring(0,1);//substring提取字符串中介于两个指定下标之间的字符。
+str3.trim();//trim去掉字符串两端多余的空格
+str3.contat("bcd");  //contat连接两个字符串
+				
+</script>
+</body>)
+</html>
