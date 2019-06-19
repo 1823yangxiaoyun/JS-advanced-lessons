@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数对象的属性</title>
+</head>
+<body>
+    <script>
+        function fn1(){
+            //此时length属性表示的是函数的形参个数
+            //arguments 是函数调用时，实参类数组集合
+            console.log(fn1.length);
+            for(var i=0;i<arguments.length;i++){
+                console.log(arguments[i]);
+            }
+        }
+        fn1(1,2,3);
+    </script>
+</body>
+</html>

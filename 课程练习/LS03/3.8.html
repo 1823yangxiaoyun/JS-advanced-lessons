@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        if(true)
+        {
+            var username="zhangsan";//相当于if(true)
+                                    //         var username {
+                                    //       username="zhangsan"
+                                                        //}
+                                                        }
+        console.log(username);
+
+        //全局的,对所有页面js代码均应用严格模式
+        //非严格输出
+        //如果不使用var显示声明变量，则变量自动转换为全局变量
+        function fn2(){
+            user="zhangsan"
+        }
+            fn2();
+            console.log(user);
+        function fn22(){
+          'use strict'
+           user="zhangsan"
+        }
+        fn22();
+        console.log(user);//会报错
+
+
+
+        //this 关键字
+    //非严格模式：普通函数里面，this指向全局对象 window
+    function fn3(){
+    console.log(this);
+    }
+    fn3();//Window
+    //严格模式下，在普通函数内，this指向undefined
+    function fn4(){
+        'use strict'
+        console.log(this);
+    }
+    fn4();//undefined
+
+    </script>
+</body>
+</html>

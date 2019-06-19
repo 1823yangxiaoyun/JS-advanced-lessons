@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //添加对象属性
+        var obj={x:1};
+        var z="age";
+        //obj.z=20;
+        obj[z]=20;
+        console.log(obj);
+        for(var i in obj){
+            console.log(i,obj[i]);
+        }
+//删除对象属性
+        delete obj.z;
+
+    </script>
+</body>
+</html>

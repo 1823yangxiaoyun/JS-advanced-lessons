@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj ={"username":"zhangsan" ,"age":20};
+        obj.__proto__.sex = "male";//添加
+        console.log(obj._proto_);
+
+        //for in 遍历的是对象的所有可枚举属性
+        for(var i in obj){
+            console.log("键名"+i);
+            console.log(i+":"+obj[i]);//obj[变量]
+        }
+</script>
+</body>
+</html>

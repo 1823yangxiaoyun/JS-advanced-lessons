@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <img src="1.jpg" alt="">
+    <span id="title"></span>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        /*
+            ajax从后端请求数据，会局部刷新网页
+            XMLHttpRequest js 原生发起ajax请求的对象
+            jQuery ajax 对XMLHtppRequest 做了封装
+        */
+        $("#btn").click(function(){
+            $.ajax({
+            url:"./server.php",
+            type:"get",
+            success:function(data){
+                $('#title').html(data);
+            },
+            error:function(err){
+
+            }
+        })
+        console.log("你好")
+        })
+      
+    </script>
+</body>
+</html>

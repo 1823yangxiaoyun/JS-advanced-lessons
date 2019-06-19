@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <img src="1.jpg" id="img1"/>
+    <button id="attrbtn">attr</button>
+    <button id="btn">btn</button>
+    <button id="btn1">btn1</button>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        /*
+            attr("属性名"，“属性值”)；设置特定元素的属性
+            attr("属性名");获取特定的属性值
+            removeAtr("属性名") 剔除掉特定属性
+            addClass("class名称") 表示向选中的元素添加新的class,不会覆盖掉原来的
+            removeClass("class名") 移除
+        */
+        $('#attrbtn').click(function(){
+            $("#img1").attr("src","2.jpg");
+            alert( $("#img1").attr("src"));
+        })
+        $('#btn').click(function(){
+            $("#img1").attr("title","这是一张图片");
+        })
+        $('#btn1').click(function(){
+            $("#img1").removeAttr("title")
+        })
+    </script>
+</body>
+</html>

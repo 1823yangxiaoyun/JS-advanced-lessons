@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /* var userId=2;
+        document.onclick=function(){
+            alert(userId);
+        }
+        /*很长一段代码*/
+       /* if(true){
+            var userId=20;
+        }//alert结果为20*/
+
+
+//避免同名变量的相互污染，用立即函数形成自己的作用域
+        var userId=2;
+        document.onclick=function(){
+            alert(userId);
+        }
+        /*很长一段代码*/
+        (function(){
+            if(true){
+                var userId=20;
+                }
+        });
+
+
+        //变量的非期望共享
+        function foo(){
+            var arr1=[];
+            for(var i=0;i<10;i++){
+
+                (function (j){
+                    arr1[j]=function(){
+                    return j;
+                }
+                })(i)  
+            }
+            return arr1;
+            }
+        var arr2=foo();
+        arr2[0]();
+    </script>
+</body>
+</html>

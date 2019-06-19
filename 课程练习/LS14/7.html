@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var point={
+            x:0,
+            y:0,
+           
+            moveTo:function(){
+                 /*
+                多层嵌套的时候，内部函数this指向的是window
+            */
+                var that =this;
+                function moveToX(x){
+                    this.x=x;
+
+                }
+
+                function moveToY(y){
+                    that.y=y;
+                }
+                moveToX(x);
+            }
+        }
+        point.moveTo(10,10);
+        console.log(point);
+    </script>
+</body>
+</html>

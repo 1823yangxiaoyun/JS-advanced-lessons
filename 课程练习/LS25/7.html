@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      let reg1=/xyz/gi;
+      let reg2=new RegExp(/xyz/gi);
+      let reg3=new RegExp('xyz','gi');
+      let reg4=new RegExp(/xyz/gi,'i');
+      /*
+        正则对象.flags 获取正则对象的修饰符 
+      */
+      console.log(reg1.flags);
+
+      let str="aaa_aa_a";
+      let reg5=/a+/gi;
+      let reg6=/a+/y;
+      reg5.exec(str);
+      reg5.exec(str)
+      reg6.exec(str);
+      reg6.lastIndex;
+      reg6.exec(str);
+      reg5.sticky;
+      reg6.sticky;
+
+
+    </script>
+</body>
+</html>

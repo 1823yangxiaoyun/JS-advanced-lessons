@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          /*
+            使用Symbol生成一个Syboml的变量
+            并且具有唯一性
+            不可以转换为其他数据类型
+        */
+        let s1= Symbol("s1");
+        let s2=Symbol("s1");
+        console.log(s1==s2);
+    </script>
+</body>
+</html>

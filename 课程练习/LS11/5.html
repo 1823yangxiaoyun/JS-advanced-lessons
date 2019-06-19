@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      /*  var obj={x:1};
+        Object.defineProperty(obj,"y",{
+            value:"2",
+            enumerable:false
+        });
+        console.log(obj);
+        for(var i in obj){
+            console.log(i,obj[i]);
+        }
+        var person ={
+            "username":"jack"
+        };
+        Object.defineProperty(person,"username",{
+            //是否可以枚举 用for..in能否遍历
+            enumerable:true,
+            //是否可配置
+            configurable:true,
+            //属性是否可写
+            writable:false,
+            //属性值
+            value:"mike"
+        });
+        person.username="lily";
+        delete person.username;
+        console.log(person,person);*/
+        var obj ={x:1,y:2}
+        obj.z=3;
+        for(var i in obj){
+            console.log(i,obj[i]);
+        }
+        obj.z=4;
+        delete obj.z;
+
+        Object.defineProperty(obj,"k",{
+            vslue:5
+        })
+        obj.k=6;
+        console.log(obj.k);
+        delete obj.k;
+        console.log(obj.k);
+        for(var i in obj){
+            console.log(i,obj[i]);
+        }
+    </script>
+</body>
+</html>

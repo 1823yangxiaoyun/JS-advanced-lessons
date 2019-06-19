@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数方法</title>
+</head>
+<body>
+    <script>
+        var objA={"objName":"AAA"};
+        var objB={"objName":"BBB"};
+        objA.foo=function(){
+            console.log(this.objName);
+        }
+        //.foo();
+        //方法.call();
+        objA.foo.call(objB);
+        function Person (username ,age){
+            this.username=username;
+            this.age=age;
+        }
+        //继承上一个函数的操作
+        function Student(username,age,sex){
+            Person.call(this,username,age);
+            this.sex="male";
+        }
+        var student =new Student("zhangsan",20,"male");
+        console.log(student);
+    </script>
+</body>
+</html>

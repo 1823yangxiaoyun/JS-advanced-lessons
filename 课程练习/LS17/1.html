@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>demo1</title>
+</head>
+<body>
+    <script>
+        /*
+          arr.forEach(callback,thisArg);
+          callback是针对数组的每个数组元素所应用的回调函数
+          value表示数组元素的元素值
+          index是数组元素的索引值
+          arr表示被操作的数组
+          thisArg回调函数内部的this指向
+        */
+        var arr=[1,2,3];
+        var arr1=['a','b','c'];
+        var obj1={x:"d"};
+        arr1.forEach(function(value,index, arr){
+            console.log(value,index,arr);
+            this[value]=value;
+
+        },obj1)
+        console.log(obj1)
+    </script>
+</body>
+</html>

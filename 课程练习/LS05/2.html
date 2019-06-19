@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       'use strict'
+        function test() {
+            console.log(this);
+        }
+        test();// 严格模式下undefined 非严格模式下：window
+        //对象内部方法调用，this指向调用该方法的对象
+        var obj ={
+            x:0,
+            test:function(){
+                console.log(this);
+            }
+        }
+        obj.test();// 严格模式下Object 非严格模式下：test: ƒ ()x: 0
+
+
+        var objA={"objName":"AA"};
+        var objB={"objName":"BBB"};
+        objA.test=function(){
+            console.log(this.objName);
+        }
+        objA.test();//AA
+        
+        //方法.call()当前对象
+        //将方法的调用执行从原有对象切换到当前对象
+        objA.test.call(objB);//BBB
+    </script>
+</body>
+</html>

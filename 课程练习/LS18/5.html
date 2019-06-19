@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+         匹配开头字符是数字 第二个是字符是a-f
+         第三个字符是空格
+        */
+        var reg1=/\d[a-f]\s/gi
+        var str1="1f hhh";
+        str1.replace(reg1,"x");
+
+        var reg2=/^a\d$/gi//以a开头 以数字结尾
+        var str2="a1fhahh";
+        str2.replace(reg2,"x");
+
+
+    </script>
+</body>
+</html>

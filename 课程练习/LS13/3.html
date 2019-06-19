@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(username,age){
+            this.username=username;
+            this.age=age;
+            
+        }
+        //节省内存空间，所有对象都可以使用此方法
+        Person.prototype.sayHello=function(){
+                console.log("hello world");
+            
+        }
+        var person= new Person("zhansan",20);
+        var person1=new Person("lisi",25);
+        console.log(person.__proto__==Person.prototype);
+        console.log(person,person1);
+        person.sayHello();
+        person1.sayHello();
+
+    </script>
+</body>
+</html>

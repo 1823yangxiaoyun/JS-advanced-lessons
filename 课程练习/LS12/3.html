@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var o1={x:1};
+        var o2=Object.create(o1);
+        console.log(o2.__proto__==o1);
+        //o2自身上添加属性
+        o2.x=3;
+        //delete只能删除自身所具有的属性
+        delete o2.x;
+        o2.__proto__.x=2
+        console.log(o2.x);
+        </script>
+</body>
+</html>

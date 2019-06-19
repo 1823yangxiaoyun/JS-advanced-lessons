@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            数量词:
+            m? 表示m出现的0次或者1次
+            n+ 表示n出现1次或者多次
+            p(m,n)表示p至少m次，至多n次
+        */
+        var reg1=/a?bcd/gi; 
+        var str1="abcd bcd aabcd";
+        str.replace(reg1,"x");
+
+        var reg2=/a+bcd/gi;
+        var str2="abcd bcd aabcd aaabcd";
+        str2.replace(reg2,"x");
+
+    </script>
+</body>
+</html>

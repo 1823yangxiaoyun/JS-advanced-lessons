@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            进行两侧的模式匹配，然后完成对应位置上的变量赋值
+        */
+        let [first,second,third]=["bar","foo","baz"];
+        console.log(third,second,first);
+        /*
+            ....剩余运算符
+        */
+        let [head,...tail]=[1,2,3,4];
+        console.log(head,tail);
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <table width="400" height="400" border="1" align="center">
+        <tr class="odd">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="even">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+         </tr>
+         <tr class="odd">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+        </tr>
+        <tr class="even">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+         </tr>
+    </table>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js">
+    </script>
+    <script>
+         // $("body").css("background","red");
+         //$("选择器")称之为jquery包装集
+         //基本选择器：类选择器、标签选择器、id选择器、群选择器
+         $("td:first").css("background","red");
+         $("td:last").css("background","green");
+         $("td:even").css("background","blue");
+         $("td:odd").css("background","purple");
+         /*
+            通过索引的方式定位到某一单元格
+              $("td:eq(索引值)")
+         */
+         $("td:eq(4)").css("background","pink");
+         $("td:gt(1)").css("background","yellow");//索引值大于某一特定的值
+         $("td:lt(1)").css("background","black");//索引值小于某一特定的值
+         $("td：not(#td1)").css("background","yellow");//排除掉相应的元素
+    </script>
+</body>
+</html>

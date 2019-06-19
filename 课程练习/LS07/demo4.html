@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //作用域的静态性，只要完成函数的定义
+        //那变量的作用域是确定的
+        //
+        var username="jack";
+        function foo(){
+            console.log(username);
+        }
+        function bar(){
+            var username="bill";
+            foo();
+        }
+        bar();
+
+        console.log(x)
+
+            </script>
+</body>
+</html>
